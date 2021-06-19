@@ -12,6 +12,14 @@ controls:
     - G1 Z10
     - G90
     name: Move SPINDLE away
+  - commands:
+    - G90
+    - G1 X0 Y0
+    name: Return to X0 Y0  
+  - commands:
+    - G90
+    - G1 X0 Y0 Z0
+    name: Return to X0 Y0 Z0 
   layout: vertical
   name: CNC KLIPPER
 feature:

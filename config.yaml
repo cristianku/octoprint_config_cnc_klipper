@@ -1,0 +1,172 @@
+accessControl:
+  salt: VwmmapExoev5TgIvVk4yZ2hlLZsVDmIg
+api:
+  key: 34648C55577743678122AB0BECB4133F
+plugins:
+  announcements:
+    _config_version: 1
+    channels:
+      _blog:
+        read_until: 1622212200
+      _important:
+        read_until: 1521111600
+      _octopi:
+        read_until: 1611568800
+      _plugins:
+        read_until: 1622782800
+      _releases:
+        read_until: 1620652800
+  cura:
+    cura_engine: null
+  discovery:
+    publicPort: 80
+    upnpUuid: 8eaf38b5-8e60-4e27-b078-e35d2e151db2
+  errortracking:
+    unique_id: f99797fb-f383-40d3-b63c-e8dfaecfc3f8
+  gcodeviewer:
+    _config_version: 1
+  klipper:
+    _config_version: 3
+    configuration:
+      old_config: "# This file contains common pin mappings for the BIGTREETECH SKR\
+        \ V1.4\n# board. To use this config, the firmware should be compiled for the\n\
+        # LPC1768.\n\n\n[safe_z_home]\nhome_xy_position: 150,150 # Change coordinates\
+        \ to the center of your print bed\nspeed: 100\nz_hop: 20                 #\
+        \ Move up 10mm\nz_hop_speed: 5\n\n\n[bed_mesh]\nspeed: 200\nhorizontal_move_z:\
+        \ 5\nmesh_min: 44,10\nmesh_max: 280,270\nprobe_count: 4,4\nmesh_pps: 2,2\n\
+        algorithm: bicubic\nbicubic_tension: 0.2\n\n\n#*********************************************\n\
+        #STEPPER X & X1\n#*********************************************\n[stepper_x]\n\
+        spi_software_miso_pin: P0.5\nspi_software_mosi_pin: P1.17\nspi_software_sclk_pin:\
+        \ P0.4\nstep_pin: P2.2\ndir_pin: !P2.6\nenable_pin: !P2.1\ndiag_pin: P1.29\n\
+        \nrotation_distance = 20.05\nmicrosteps: 128\n\nendstop_pin: tmc5160_stepper_x:virtual_endstop\n\
+        position_endstop: 0\nposition_max: 280\nhoming_speed: 30\nhoming_retract_dist:\
+        \ 0\n\n[stepper_x1]\nspi_software_miso_pin: P0.5\nspi_software_mosi_pin: P1.17\n\
+        spi_software_sclk_pin: P0.4\nstep_pin: P0.19\ndir_pin: !P0.20\nenable_pin:\
+        \ !P2.8\n\nrotation_distance = 20.05\nmicrosteps: 128\n\nendstop_pin: tmc5160_stepper_x1:virtual_endstop\n\
+        position_endstop: 0\nposition_max: 280\nhoming_speed: 30\nhoming_retract_dist:\
+        \ 0\n\n#*********************************************\n#STEPPER X & X1\n#*********************************************\n\
+        [tmc5160 stepper_x]\ncs_pin: P1.10\n\nrun_current: 1.10\n#driver_SGTHRS value\
+        \ in the config and go from 0 (least sensitive) to 255 (most sensitive).\n\
+        driver_SGTHRS: 130\nstealthchop_threshold: 0\n\n\n[tmc5160 stepper_x1]\ncs_pin:\
+        \ P1.9\ndiag_pin: P1.28\nrun_current: 1.10\n#hold_current: .7\n#driver_SGTHRS\
+        \ value in the config and go from 0 (least sensitive) to 255 (most sensitive).\n\
+        driver_SGTHRS: 130\nstealthchop_threshold: 0\n\n\n#*********************************************\n\
+        #STEPPER Y\n#*********************************************\n[stepper_y]\n\
+        spi_software_miso_pin: P0.5\nspi_software_mosi_pin: P1.17\nspi_software_sclk_pin:\
+        \ P0.4\nenable_pin: !P0.21\nstep_pin: P0.22\ndir_pin: P2.11\n\nrotation_distance\
+        \ = 3.98\nmicrosteps: 128\n\nendstop_pin: tmc5160_stepper_y:virtual_endstop\n\
+        position_max: 330\nposition_min: -5\n\n#*********************************************\n\
+        #STEPPER Y1\n#*********************************************\n[stepper_y1]\n\
+        spi_software_miso_pin: P0.5\nspi_software_mosi_pin: P1.17\nspi_software_sclk_pin:\
+        \ P0.4\n\nenable_pin: !P2.12\nstep_pin: P2.13\ndir_pin: P0.11\n\nrotation_distance\
+        \ = 3.98\nmicrosteps: 128\n\nendstop_pin: tmc5160_stepper_y1:virtual_endstop\n\
+        position_max: 330\nposition_min: -5\n\n\n\n#*********************************************\n\
+        #STEPPER Y & Y1\n#*********************************************\n\n[tmc5160\
+        \ stepper_y]\ncs_pin: P1.8\ndiag1_pin: P1.27\nrun_current: 1\nhold_current:\
+        \ 0.55\nstealthchop_threshold: 0\n\n[tmc5160 stepper_y1]\ncs_pin: P1.4\ndiag1_pin:\
+        \ P1.26\nrun_current: 1\nhold_current: 0.55\nstealthchop_threshold: 0\n\n\
+        #*********************************************\n#STEPPER Z\n#*********************************************\n\
+        \n[stepper_z]\nspi_software_miso_pin: P0.5\nspi_software_mosi_pin: P1.17\n\
+        spi_software_sclk_pin: P0.4\n\nenable_pin: !P1.16\nstep_pin: P1.15\ndir_pin:\
+        \ P1.14\n\nposition_max: 280\n#rotation_distance = <full_steps_per_rotation>\
+        \ * <microsteps> * <step_distance>\n#rotation_distance = 400( 0.9 stepper\
+        \ motors ) * 32 * 0.00060 = 16\nrotation_distance = 3.86\nmicrosteps: 128\n\
+        \nendstop_pin: tmc5160_stepper_z:virtual_endstop\n\n\n[tmc5160 stepper_z]\n\
+        cs_pin: P1.1\ndiag1_pin: P1.25\nrun_current: 1.1\n#hold_current: 0.35\nstealthchop_threshold:\
+        \ 0\n\n\n[mcu]\nserial: /dev/serial/by-id/usb-Klipper_lpc1769_2240001780A037AFC8E4BF5BC22000F5-if00\n\
+        \n\n[printer]\nkinematics: cartesian\nmax_velocity: 100\nmax_accel: 700\n\
+        max_z_velocity: 20\nmax_z_accel: 100\n\n\n\n[virtual_sdcard]\npath: ~/.octoprint/uploads/\n\
+        \n\n# \"RepRapDiscount 128x64 Full Graphic Smart Controller\" type displays\n\
+        #[display]\n#lcd_type: st7920\n#cs_pin: EXP1_4\n#sclk_pin: EXP1_5\n#sid_pin:\
+        \ EXP1_3\n#encoder_pins: ^EXP2_3, ^EXP2_5\n#click_pin: ^!EXP1_2\n\n#[output_pin\
+        \ beeper]\n#pin: EXP1_1\n#pwm: True\n#value: 0\n#shutdown_value: 0\n#cycle_time:\
+        \ 0.001\n#scale: 1000\n\n\n[board_pins]\naliases:\n    # EXP1 header\n   \
+        \ EXP1_1=P1.30, EXP1_3=P1.18, EXP1_5=P1.20, EXP1_7=P1.22, EXP1_9=<GND>,\n\
+        \    EXP1_2=P0.28, EXP1_4=P1.19, EXP1_6=P1.21, EXP1_8=P1.23, EXP1_10=<5V>,\n\
+        \    # EXP2 header\n    EXP2_1=P0.17, EXP2_3=P3.26, EXP2_5=P3.25, EXP2_7=P1.31,\
+        \ EXP2_9=<GND>,\n    EXP2_2=P0.15, EXP2_4=P0.16, EXP2_6=P0.18, EXP2_8=<RST>,\
+        \ EXP2_10=<NC>\n    # Pins EXP2_1, EXP2_6, EXP2_2 are also MISO, MOSI, SCK\
+        \ of bus \"ssp0\"\n\n[gcode_macro G29]\ngcode:\n  G28\n  BED_MESH_CALIBRATE\n\
+        \  G0 X150 Y150 Z60 F1000\n  SAVE_CONFIG\n\n[gcode_macro M17]\ngcode:\n  SET_STEPPER_ENABLE\
+        \ STEPPER=stepper_x ENABLE=1\n  SET_STEPPER_ENABLE STEPPER=stepper_x1 ENABLE=1\n\
+        \  SET_STEPPER_ENABLE STEPPER=stepper_y ENABLE=1\n  SET_STEPPER_ENABLE STEPPER=stepper_y1\
+        \ ENABLE=1\n  SET_STEPPER_ENABLE STEPPER=stepper_z ENABLE=1\n\n#[gcode_macro\
+        \ M900]\n#gcode: SET_PRESSURE_ADVANCE ADVANCE={K}\n\n[gcode_macro m205]\n\
+        gcode:\n    G4\n\n# Gcode for clearing the display\n#[delayed_gcode clear_display]\n\
+        #gcode:\n#    M117\n\n[gcode_macro G80]\ngcode:\n BED_MESH_CALIBRATE\n G1\
+        \ X194 Y162 F3600\n\n[gcode_macro G81]\ngcode:\n BED_MESH_OUTPUT\n\n\n# Idle\
+        \ timeout. An idle timeout is automatically enabled - add an\n# explicit idle_timeout\
+        \ config section to change the default settings.\n[idle_timeout]\n#gcode:\n\
+        #   A list of G-Code commands to execute on an idle timeout. See\n#   docs/Command_Templates.md\
+        \ for G-Code format. The default is to run\n#   \"TURN_OFF_HEATERS\" and \"\
+        M84\".\ntimeout: 120\n#   Idle time (in seconds) to wait before running the\
+        \ above G-Code\n#   commands. The default is 600 seconds.\n\n\n\n# Gcode executed\
+        \ when the printer is ready\n[delayed_gcode on_ready]\ninitial_duration: 1\n\
+        gcode:\n    SET_IDLE_TIMEOUT TIMEOUT=3000\n   # M117 Ciao Cristian\n    #UPDATE_DELAYED_GCODE\
+        \ ID=clear_display DURATION=10\n\n######################################################################\n\
+        # Start Print and End Print\n######################################################################\n\
+        \n# Replace the slicer's custom start and end g-code scripts with\n# START_PRINT\
+        \ and END_PRINT.\n\n[gcode_macro START_PRINT]\n; default_parameter_BED_TEMP:\
+        \ 60\n; default_parameter_EXTRUDER_TEMP: 210\ngcode:\n    # Start bed heating\n\
+        \    ;\n    M107                    ; Turn layer fan off\n    G21        \
+        \             ; Set to metric [change to G20 if you want Imperial]\n    G90\
+        \                     ; Force coordinates to be absolute relative to the origin\n\
+        \    G28                     ; Home X/Y/Z axis\n    G1 F100 Z80;\n\n    M190\
+        \ S[bed0_temperature] ;wait for bed temp\n    M109 S[extruder0_temperature]\
+        \ T0 ;wait for extruder temp\n\n    G1 X3 Y20 Z15 F9000      ; Move safe Z\
+        \ height to shear strings\n    G0 X1 Y20 Z0.25 F9000     ; Move in 1mm from\
+        \ edge and up [z] 0.2mm\n    G92 E0                  ; Set extruder to [0]\
+        \ zero\n    G1 X180 E20 F400        ; Extrude 30mm filiment along X axis 100mm\
+        \ long to prime and clean the nozzle\n    G92 E0                  ; Reset\
+        \ extruder to [0] zero end of cleaning run\n    G1 E-.5 F300             ;\
+        \ Retract filiment by 1 mm to reduce string effect\n    G1 X230 F2000    \
+        \       ; quick wipe away from the filament line / purge\n    M117 End Clean\
+        \          ; Indicate nozzle clean in progress on LCD\n    M117 Printing...\n\
+        \n\n[gcode_macro END_PRINT]\ngcode:\n    # Turn off bed, extruder, and fan\n\
+        \    M140 S0\n    M104 S0\n    M106 S0\n    # Move nozzle away from print\
+        \ while retracting\n    G91\n    G1 X-2 Y-2 E-3 F300\n    # Raise nozzle by\
+        \ 40mm\n    G1 Z20 F500\n    G90\n    # Disable steppers\n    M84\n\n\n  \
+        \          \n \n"
+  softwareupdate:
+    _config_version: 9
+  tracking:
+    enabled: false
+    unique_id: 74c5dcd5-8255-4b72-b9b5-f7c98e2754f2
+  virtual_printer:
+    _config_version: 1
+printerProfiles:
+  default: _default
+serial:
+  additionalPorts:
+  - /tmp/printer
+  disconnectOnErrors: false
+  port: /tmp/printer
+server:
+  commands:
+    serverRestartCommand: sudo service octoprint restart
+    systemRestartCommand: sudo shutdown -r now
+    systemShutdownCommand: sudo shutdown -h now
+  firstRun: false
+  onlineCheck:
+    enabled: true
+  pluginBlacklist:
+    enabled: true
+  secretKey: qMqIEo5BNh6jcbIqosxcgpvOGeXGyDQ7
+  seenWizards:
+    backup: null
+    corewizard: 4
+    tracking: null
+temperature:
+  profiles:
+  - bed: 100
+    chamber: null
+    extruder: 210
+    name: ABS
+  - bed: 60
+    chamber: null
+    extruder: 180
+    name: PLA
+webcam:
+  ffmpeg: /usr/bin/ffmpeg
+  snapshot: http://127.0.0.1:8080/?action=snapshot
+  stream: /webcam/?action=stream

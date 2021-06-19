@@ -24,13 +24,13 @@ controls:
     name: Move SPINDLE away
   - commands:
     - G90
-    - G1 X0 Y0 F3000
-    name: Return to X0 Y0 
+    - G1 X0 Y0
+    name: Return to X0 Y0 F3000
   - commands:
     - G90
-    - G1 X0 Y0 Z0 F3000
-    name: Return to X0 Y0 Z0 
-  layout: grid
+    - G1 X0 Y0 Z0
+    name: Return to X0 Y0 Z0 F3000
+  layout: vertical
   name: CNC KLIPPER
 feature:
   sdSupport: false
@@ -210,11 +210,11 @@ plugins:
       _01#sidebar_plugin_firmware_check_warning_wrapper: false
       _02#sidebar_plugin_firmware_check_info_wrapper: false
       _03#sidebar_plugin_klipper_wrapper: true
+      _04#UICWebCamWidget: false
+      _05#UICGcodeVWidget: false
     - _00div.UICmainTabs: true
-    - _00#UICGcodeVWidget: false
-      _01#UICWebCamWidget: false
-      _02#sidebar_plugin_action_command_notification_wrapper: true
-      _03#state_wrapper: true
+    - _00#sidebar_plugin_action_command_notification_wrapper: true
+      _01#state_wrapper: true
     themeVersion: 0.2.1
     topIconSort:
     - navbar_plugin_action_command_prompt

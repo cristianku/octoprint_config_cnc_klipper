@@ -31,7 +31,7 @@ controls:
     - G1 X0 Y0 F3000
     - G1 Z0 F300
     name: Return to X0 Y0 Z0
-  layout: grid
+  layout: vertical
   name: CNC KLIPPER
 feature:
   sdSupport: false
@@ -243,7 +243,6 @@ server:
     systemRestartCommand: sudo shutdown -r now
     systemShutdownCommand: sudo shutdown -h now
   firstRun: false
-  incompleteStartup: true
   onlineCheck:
     enabled: true
   pluginBlacklist:

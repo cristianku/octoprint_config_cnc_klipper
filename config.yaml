@@ -5,9 +5,8 @@ api:
 controls:
 - children:
   - commands:
-    - FIRMWARE_RESTART
-    - RESTART
-    name: RESTART KLIPPER
+    - G28
+    name: HOME PROBING X Y Z
   - commands:
     - G92
     name: SET NEW HOME ( G92 )
@@ -24,6 +23,10 @@ controls:
     - G90
     - G1 X0 Y0 Z0
     name: Return to X0 Y0 Z0
+  - commands:
+    - FIRMWARE_RESTART
+    - RESTART
+    name: RESTART KLIPPER
   layout: grid
   name: CNC KLIPPER
 feature:

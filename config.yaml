@@ -28,9 +28,16 @@ controls:
     name: Return to X0 Y0 F3000
   - commands:
     - G90
+<<<<<<< HEAD
     - G1 X0 Y0 Z0
     name: Return to X0 Y0 Z0 F3000
   layout: vertical
+=======
+    - G1 X0 Y0 F3000
+    - G1 Z0 F200
+    name: Return to X0 Y0 Z0 
+  layout: grid
+>>>>>>> ae2c2237b683ab431474ee43af4896efa56e1558
   name: CNC KLIPPER
 feature:
   sdSupport: false

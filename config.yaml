@@ -3,7 +3,6 @@ accessControl:
 api:
   key: 34648C55577743678122AB0BECB4133F
 controls: null
-
 plugins:
   announcements:
     _config_version: 1

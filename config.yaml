@@ -5,28 +5,34 @@ api:
 controls:
 - children:
   - commands:
+    - FIRMWARE_RESTART
+    - RESTART
+    name: RESTART KLIPPER
+
+  - commands:
     - G28
     name: HOME PROBING X Y Z
   - commands:
-    - G92
-    name: SET NEW HOME ( G92 )
+    - G92 X0 Y0 Z0
+    name: SET NEW HOME X Y Z ( G92 )
+  - commands:
+    - G92 X0 Y0
+    name: SET NEW HOME X Y  ( G92 )    
+    
   - commands:
     - G91
-    - G1 Z10
+    - G1 Z10 F500
     - G90
     name: Move SPINDLE away
   - commands:
     - G90
     - G1 X0 Y0
-    name: Return to X0 Y0
+    name: Return to X0 Y0 F3000
   - commands:
     - G90
     - G1 X0 Y0 Z0
-    name: Return to X0 Y0 Z0
-  - commands:
-    - FIRMWARE_RESTART
-    - RESTART
-    name: RESTART KLIPPER
+    name: Return to X0 Y0 Z0 F3000
+
   layout: grid
   name: CNC KLIPPER
 feature:

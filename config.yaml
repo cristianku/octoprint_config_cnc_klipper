@@ -12,7 +12,13 @@ controls:
     - G1 Z10
     - G90
     name: Move SPINDLE away
+  layout: vertical
   name: CNC KLIPPER
+feature:
+  sdSupport: false
+  temperatureGraph: false
+gcodeAnalysis:
+  runAt: never
 plugins:
   announcements:
     _config_version: 1
@@ -143,8 +149,11 @@ plugins:
   tracking:
     enabled: false
     unique_id: 74c5dcd5-8255-4b72-b9b5-f7c98e2754f2
+  uicustomizer:
+    themeVersion: 0.2.1
   virtual_printer:
     _config_version: 1
+    enabled: true
 printerProfiles:
   default: _default
 serial:
@@ -167,6 +176,11 @@ server:
     backup: null
     corewizard: 4
     tracking: null
+system:
+  actions:
+  - action: test
+    command: test
+    name: test
 temperature:
   profiles:
   - bed: 100

@@ -6,7 +6,7 @@ controls:
 - children:
   - commands:
     - G92
-    name: SET NEW HOME ( G92 ) 
+    name: SET NEW HOME ( G92 )
   - commands:
     - G91
     - G1 Z10

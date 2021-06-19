@@ -28,7 +28,8 @@ controls:
     name: Return to X0 Y0 
   - commands:
     - G90
-    - G1 X0 Y0 Z0 F3000
+    - G1 X0 Y0 F3000
+    - G1 Z0 F200
     name: Return to X0 Y0 Z0 
   layout: grid
   name: CNC KLIPPER

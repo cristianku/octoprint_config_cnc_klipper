@@ -5,31 +5,13 @@ api:
 controls:
 - children:
   - commands:
-    - G91
-    - G1 X%(distance)s F%(speed)s
-    - G90
     - G92
-    input:
-    - default: 10
-      name: Distance
-      parameter: distance
-    - default: 5000
-      name: Speed
-      parameter: speed
-    name: Move X right (+G92 new home)
+    name: SET NEW HOME ( G92 ) 
   - commands:
     - G91
-    - G1 X-%(distance)s F%(speed)s
+    - G1 Z10
     - G90
-    - G92
-    input:
-    - default: 10
-      name: Distance
-      parameter: distance
-    - default: 5000
-      name: Speed
-      parameter: speed
-    name: Move X left (+G92 new home)
+    name: Move SPINDLE away
   name: CNC KLIPPER
 plugins:
   announcements:

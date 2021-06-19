@@ -9,13 +9,6 @@ controls:
     - G1 X-10 F3000
     - G90
     - G92
-     input:
-      - default: 10
-        name: Distance
-        parameter: distance
-      - default: 3000
-        name: Speed
-        parameter: speed
     name: MOVE X ( with G92 )
   layout: vertical
   name: CNC commands

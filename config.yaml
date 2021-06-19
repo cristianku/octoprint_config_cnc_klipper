@@ -8,7 +8,7 @@ controls:
     - G91
     - G1 X%(distance)s F%(speed)s
     - G90
-    - G92 
+    - G92
     input:
     - default: 10
       name: Distance
@@ -21,7 +21,7 @@ controls:
     - G91
     - G1 X-%(distance)s F%(speed)s
     - G90
-    - G92 
+    - G92
     input:
     - default: 10
       name: Distance
@@ -30,7 +30,6 @@ controls:
       name: Speed
       parameter: speed
     name: Move X left (+G92 new home)
-
   name: CNC KLIPPER
 plugins:
   announcements:

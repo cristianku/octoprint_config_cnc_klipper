@@ -2,6 +2,16 @@ accessControl:
   salt: VwmmapExoev5TgIvVk4yZ2hlLZsVDmIg
 api:
   key: 34648C55577743678122AB0BECB4133F
+controls:
+- children:
+  - commands:
+    - G91
+    - G1 X-10 F3000
+    - G90
+    - G92
+    name: MOVE X AXIS LEFT
+  layout: vertical
+  name: CNC commands
 plugins:
   announcements:
     _config_version: 1
@@ -13,7 +23,7 @@ plugins:
       _octopi:
         read_until: 1611568800
       _plugins:
-        read_until: 1622782800
+        read_until: 1623992400
       _releases:
         read_until: 1620652800
   cura:
@@ -132,6 +142,63 @@ plugins:
   tracking:
     enabled: false
     unique_id: 74c5dcd5-8255-4b72-b9b5-f7c98e2754f2
+  uicustomizer:
+    addWebCamZoom: false
+    mainTabs:
+    - - control_link
+      - true
+      - false
+      - fas fa-expand-arrows-alt
+      - true
+      - false
+    - - temp_link
+      - false
+      - false
+      - fas fa-thermometer-half
+      - true
+      - false
+    - - term_link
+      - true
+      - false
+      - fas fa-terminal
+      - true
+      - false
+    - - gcode_link
+      - false
+      - false
+      - fab fa-codepen
+      - true
+      - false
+    - - tab_plugin_klipper_main_link
+      - true
+      - false
+      - false
+      - textOnly
+      - '#000000'
+    mainTabsCustomize: false
+    rows:
+    - _00#files_wrapper: true
+      _01#sidebar_plugin_firmware_check_warning_wrapper: false
+      _02#sidebar_plugin_firmware_check_info_wrapper: false
+      _03#sidebar_plugin_klipper_wrapper: true
+      _04#UICWebCamWidget: false
+    - _00div.UICmainTabs: true
+    - _00#UICGcodeVWidget: true
+      _01#sidebar_plugin_action_command_notification_wrapper: true
+      _02#state_wrapper: true
+    theme: bluemoon
+    themeLocal: false
+    themeVersion: 0.2.1
+    topIconSort:
+    - navbar_plugin_klipper
+    - navbar_plugin_action_command_prompt
+    - navbar_plugin_logging_seriallog
+    - navbar_plugin_logging_plugintimingslog
+    - navbar_plugin_pi_support
+    widths:
+    - '2'
+    - '6'
+    - '3'
   virtual_printer:
     _config_version: 1
 printerProfiles:
@@ -166,7 +233,4 @@ temperature:
     chamber: null
     extruder: 180
     name: PLA
-webcam:
-  ffmpeg: /usr/bin/ffmpeg
-  snapshot: http://127.0.0.1:8080/?action=snapshot
-  stream: /webcam/?action=stream
+webcam: null

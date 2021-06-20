@@ -35,6 +35,14 @@ controls:
     - G92 X0 Y0 Z0
     name: SET NEW HOME X Y Z ( G92 )
   - commands:
+    - G90
+    - G1 X0 Y0 F3000
+    - G1 Z0 F300
+    name: Return to X0 Y0 Z0
+  layout: horizontal
+  name: CNC HOMING X Y Z
+- children:
+  - commands:
     - G91
     - G1 X45 F5000
     - G90
@@ -59,7 +67,7 @@ controls:
     - G92 X0 Y0
     name: Y -45 ( and set new home )
   layout: horizontal
-  name: CNC KLIPPER 2
+  name: TEMPORARY MOVEMENTS TO DRILL THE HOLDING HOLES IN THE BED
 feature:
   sdSupport: false
   temperatureGraph: false

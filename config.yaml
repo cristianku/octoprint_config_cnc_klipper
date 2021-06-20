@@ -15,9 +15,6 @@ controls:
     - G92 X0 Y0
     name: SET NEW HOME X Y  ( G92 )
   - commands:
-    - G92 X0 Y0 Z0
-    name: SET NEW HOME X Y Z ( G92 )
-  - commands:
     - G91
     - G1 Z10 F500
     - G90
@@ -31,6 +28,13 @@ controls:
     - G1 X0 Y0 F3000
     - G1 Z0 F300
     name: Return to X0 Y0 Z0
+            
+  layout: horizontal
+  name: CNC KLIPPER
+- children:
+  - commands:
+    - G92 X0 Y0 Z0
+    name: SET NEW HOME X Y Z ( G92 )
   - commands:
     - G91
     - G1 X45 F5000
@@ -57,7 +61,8 @@ controls:
     name: Y -45 ( and set new home )   
             
   layout: horizontal
-  name: CNC KLIPPER
+  name: CNC KLIPPER 2
+
 feature:
   sdSupport: false
   temperatureGraph: false

@@ -15,6 +15,9 @@ controls:
     - G92 X0 Y0
     name: SET NEW HOME X Y
   - commands:
+    - G92 Z0
+    name: SET NEW HOME Z
+  - commands:
     - G91
     - G1 Z10 F500
     - G90

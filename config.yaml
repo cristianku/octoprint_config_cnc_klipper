@@ -62,25 +62,25 @@ controls:
     - G1 X45 F5000
     - G90
     - G92 X0 Y0
-    name: X +45 ( and set new home )
+    name: X +45 ( and set new home X0 Y0)
   - commands:
     - G91
     - G1 X-45 F5000
     - G90
     - G92 X0 Y0
-    name: X -45 ( and set new home )
+    name: X -45 ( and set new home X0 Y0)
   - commands:
     - G91
     - G1 Y45 F5000
     - G90
     - G92 X0 Y0
-    name: Y +45 ( and set new home )
+    name: Y +45 ( and set new home X0 Y0)
   - commands:
     - G91
     - G1 Y-45 F5000
     - G90
     - G92 X0 Y0
-    name: Y -45 ( and set new home )
+    name: Y -45 ( and set new home X0 Y0)
   layout: horizontal
   name: TEMPORARY MOVEMENTS TO DRILL THE HOLDING HOLES IN THE BED
   

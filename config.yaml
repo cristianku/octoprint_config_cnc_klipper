@@ -31,8 +31,9 @@ controls:
     - G1 X0 Y0 F3000
     - G1 Z0 F300
     name: Return to X0 Y0 Z0
-  layout: vertical
-  name: CNC KLIPPER
+  layout: horizontal
+  name: CNC just before starting Gcode
+  
 feature:
   sdSupport: false
   temperatureGraph: false

@@ -12,14 +12,11 @@ controls:
     - G28
     name: HOME PROBING X Y Z
   - commands:
-    - G92 X0 Y0
-    name: SET NEW HOME X Y
+    - G92 X0 Y0 Z0
+    name: SET NEW HOME X Y Z ( G92 )
   - commands:
-    - G92 Z0
-    name: SET NEW HOME Z
-  layout: horizontal
-  name: CNC preparations
-  - children:
+    - G92 X0 Y0
+    name: SET NEW HOME X Y  ( G92 )
   - commands:
     - G91
     - G1 Z10 F500
@@ -36,7 +33,6 @@ controls:
     name: Return to X0 Y0 Z0
   layout: horizontal
   name: CNC just before starting Gcode
-  
 feature:
   sdSupport: false
   temperatureGraph: false

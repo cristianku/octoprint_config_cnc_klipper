@@ -28,7 +28,6 @@ controls:
     - G1 X0 Y0 F3000
     - G1 Z0 F300
     name: Return to X0 Y0 Z0
-            
   layout: horizontal
   name: CNC KLIPPER
 - children:
@@ -58,11 +57,9 @@ controls:
     - G1 Y-45 F5000
     - G90
     - G92 X0 Y0
-    name: Y -45 ( and set new home )   
-            
+    name: Y -45 ( and set new home )
   layout: horizontal
   name: CNC KLIPPER 2
-
 feature:
   sdSupport: false
   temperatureGraph: false

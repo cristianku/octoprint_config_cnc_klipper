@@ -54,8 +54,7 @@ controls:
     - G1 Y-45 F5000
     - G90
     - G92 X0 Y0
-    name: Y -45 ( and set new home )   
-            
+    name: Y -45 ( and set new home )
   layout: vertical
   name: CNC KLIPPER
 feature:

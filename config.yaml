@@ -12,13 +12,33 @@ controls:
     - G28
     name: HOME PROBING X Y Z
   - commands:
+    - G92 X0 Y0
+    name: SET NEW HOME X0 Y0 
+  - commands:
     - G92 Z0
     name: SET NEW HOME Z0 
-  - commands:
-    - G92 X0 Y0
-    name: SET NEW HOME X Y 
   layout: horizontal
-  name: CNC just before starting Gcode
+  name: CNC preparations
+
+- children:
+  - commands:
+    - G91
+    - G1 Z10 F500
+    - G90
+    name: 1 - Move SPINDLE away
+  - commands:
+    - G90
+    - G1 X0 Y0 F3000
+    name: 2 - Return to X0 Y0
+  - commands:
+    - G90
+    - G1 X0 Y0 F3000
+    - G1 Z0 F300
+    name: 3 - Return to X0 Y0 Z0    
+    
+  layout: horizontal
+  name: CNC just before start GCODE
+  
 - children:
   - commands:
     - G91

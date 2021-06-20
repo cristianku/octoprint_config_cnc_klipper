@@ -10,87 +10,29 @@ controls:
     name: RESTART KLIPPER
   - commands:
     - G28
-    name: 2 - HOME PROBING X Y Z
-  - commands:
-    - G92 X0 Y0
-    name: 3 - SET NEW HOME X Y
-  - commands:
-    - G92 Z0
-    name: 4 - SET NEW HOME Z
-  layout: horizontal
-  name: CNC preparations
-  - children:
-  - commands:
-    - G91
-    - G1 Z10 F500
-    - G90
-    name: 1 - Move SPINDLE away
-  - commands:
-    - G90
-    - G1 X0 Y0 F3000
-    name: 2 - Return to X0 Y0
-  - commands:
-    - G90
-    - G1 X0 Y0 F3000
-    - G1 Z0 F300
-    name: 3 - Return to X0 Y0 Z0
-  layout: horizontal
-  name: CNC just before starting Gcode
-
-- children:
-  - commands:
-    - G91
-    - G1 Z10 F500
-    - G90
-    name: 1 - Move SPINDLE away
-  - commands:
-    - G92 Z0
-    name: 2 - SET NEW HOME Z
-  - commands:
-    - G90
-    - G1 X0 Y0 F3000
-    - G1 Z0 F300
-    name: 3 - Return to X0 Y0 Z0
-  layout: horizontal
-  name: CNC tool change
-- children:
+    name: HOME PROBING X Y Z
   - commands:
     - G92 X0 Y0 Z0
-    name: SET NEW HOME X Y Z
+    name: SET NEW HOME X Y Z ( G92 )
+  - commands:
+    - G92 X0 Y0
+    name: SET NEW HOME X Y  ( G92 )
+  - commands:
+    - G91
+    - G1 Z10 F500
+    - G90
+    name: Move SPINDLE away
+  - commands:
+    - G90
+    - G1 X0 Y0 F3000
+    name: Return to X0 Y0
   - commands:
     - G90
     - G1 X0 Y0 F3000
     - G1 Z0 F300
     name: Return to X0 Y0 Z0
-  layout: horizontal
-  name: CNC HOMING X Y Z
-- children:
-  - commands:
-    - G91
-    - G1 X45 F5000
-    - G90
-    - G92 X0 Y0
-    name: X +45 ( and set new home )
-  - commands:
-    - G91
-    - G1 X-45 F5000
-    - G90
-    - G92 X0 Y0
-    name: X -45 ( and set new home )
-  - commands:
-    - G91
-    - G1 Y45 F5000
-    - G90
-    - G92 X0 Y0
-    name: Y +45 ( and set new home )
-  - commands:
-    - G91
-    - G1 Y-45 F5000
-    - G90
-    - G92 X0 Y0
-    name: Y -45 ( and set new home )
-  layout: horizontal
-  name: TEMPORARY MOVEMENTS TO DRILL THE HOLDING HOLES IN THE BED
+  layout: vertical
+  name: CNC KLIPPER
 feature:
   sdSupport: false
   temperatureGraph: false

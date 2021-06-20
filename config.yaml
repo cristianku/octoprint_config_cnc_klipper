@@ -13,7 +13,7 @@ controls:
     name: HOME PROBING X Y Z
   - commands:
     - G92 X0 Y0
-    name: SET NEW HOME X Y 
+    name: SET NEW HOME X Y
   - commands:
     - G91
     - G1 Z10 F500

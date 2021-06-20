@@ -7,7 +7,7 @@ controls:
   - commands:
     - FIRMWARE_RESTART
     - RESTART
-    name: 1 - RESTART KLIPPER
+    name: RESTART KLIPPER
   - commands:
     - G28
     name: 2 - HOME PROBING X Y Z

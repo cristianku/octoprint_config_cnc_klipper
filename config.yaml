@@ -55,7 +55,7 @@ controls:
     - G90
     - G92 X0 Y0
     name: Y -45 ( and set new home )
-  layout: vertical
+  layout: grid
   name: CNC KLIPPER
 feature:
   sdSupport: false

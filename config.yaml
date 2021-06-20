@@ -10,13 +10,13 @@ controls:
     name: RESTART KLIPPER
   - commands:
     - G28
-    name: 2 - HOME PROBING X Y Z
+    name: HOME PROBING X Y Z
   - commands:
     - G92 X0 Y0
-    name: 3 - SET NEW HOME X Y
+    name: SET NEW HOME X Y
   - commands:
     - G92 Z0
-    name: 4 - SET NEW HOME Z
+    name: SET NEW HOME Z
   layout: horizontal
   name: CNC preparations
   - children:
@@ -24,16 +24,16 @@ controls:
     - G91
     - G1 Z10 F500
     - G90
-    name: 1 - Move SPINDLE away
+    name: Move SPINDLE away
   - commands:
     - G90
     - G1 X0 Y0 F3000
-    name: 2 - Return to X0 Y0
+    name: Return to X0 Y0
   - commands:
     - G90
     - G1 X0 Y0 F3000
     - G1 Z0 F300
-    name: 3 - Return to X0 Y0 Z0
+    name: Return to X0 Y0 Z0
   layout: horizontal
   name: CNC just before starting Gcode
   

@@ -55,6 +55,35 @@ controls:
     name: 3 - Return to X0 Y0 Z0
   layout: horizontal
   name: CNC tool change
+  
+- children:
+  - commands:
+    - G91
+    - G1 X45 F5000
+    - G90
+    - G92 X0 Y0
+    name: X +45 ( and set new home )
+  - commands:
+    - G91
+    - G1 X-45 F5000
+    - G90
+    - G92 X0 Y0
+    name: X -45 ( and set new home )
+  - commands:
+    - G91
+    - G1 Y45 F5000
+    - G90
+    - G92 X0 Y0
+    name: Y +45 ( and set new home )
+  - commands:
+    - G91
+    - G1 Y-45 F5000
+    - G90
+    - G92 X0 Y0
+    name: Y -45 ( and set new home )
+  layout: horizontal
+  name: TEMPORARY MOVEMENTS TO DRILL THE HOLDING HOLES IN THE BED
+  
 feature:
   sdSupport: false
   temperatureGraph: false

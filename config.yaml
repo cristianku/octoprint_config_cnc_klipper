@@ -12,11 +12,11 @@ controls:
     - G28
     name: HOME PROBING X Y Z
   - commands:
-    - G92 X0 Y0 Z0
-    name: SET NEW HOME X Y Z ( G92 )
-  - commands:
     - G92 X0 Y0
     name: SET NEW HOME X Y  ( G92 )
+  - commands:
+    - G92 X0 Y0 Z0
+    name: SET NEW HOME X Y Z ( G92 )
   - commands:
     - G91
     - G1 Z10 F500
@@ -31,6 +31,31 @@ controls:
     - G1 X0 Y0 F3000
     - G1 Z0 F300
     name: Return to X0 Y0 Z0
+  - commands:
+    - G91
+    - G1 X45 F5000
+    - G90
+    - G92 X0 Y0
+    name: X +45 ( and set new home )
+  - commands:
+    - G91
+    - G1 X-45 F5000
+    - G90
+    - G92 X0 Y0
+    name: X -45 ( and set new home )
+  - commands:
+    - G91
+    - G1 Y45 F5000
+    - G90
+    - G92 X0 Y0
+    name: Y +45 ( and set new home )
+  - commands:
+    - G91
+    - G1 Y-45 F5000
+    - G90
+    - G92 X0 Y0
+    name: Y -45 ( and set new home )   
+            
   layout: vertical
   name: CNC KLIPPER
 feature:

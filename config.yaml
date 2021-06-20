@@ -33,6 +33,22 @@ controls:
     name: Return to X0 Y0 Z0
   layout: horizontal
   name: CNC just before starting Gcode
+- children:
+  - commands:
+    - G91
+    - G1 Z10 F500
+    - G90
+    name: 1 - Move SPINDLE away
+  - commands:
+    - G92 Z0
+    name: 2 - SET NEW HOME Z
+  - commands:
+    - G90
+    - G1 X0 Y0 F3000
+    - G1 Z0 F300
+    name: 3 - Return to X0 Y0 Z0
+  layout: horizontal
+  name: CNC tool change
 feature:
   sdSupport: false
   temperatureGraph: false

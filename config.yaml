@@ -13,13 +13,12 @@ controls:
     name: HOME PROBING X Y Z
   - commands:
     - G92 X0 Y0
-    name: SET NEW HOME X0 Y0 
+    name: SET NEW HOME X0 Y0
   - commands:
     - G92 Z0
-    name: SET NEW HOME Z0 
+    name: SET NEW HOME Z0
   layout: horizontal
   name: CNC preparations
-
 - children:
   - commands:
     - G91
@@ -34,11 +33,9 @@ controls:
     - G90
     - G1 X0 Y0 F3000
     - G1 Z0 F300
-    name: 3 - Return to X0 Y0 Z0    
-    
+    name: 3 - Return to X0 Y0 Z0
   layout: horizontal
   name: CNC just before start GCODE
-  
 - children:
   - commands:
     - G91
@@ -55,7 +52,6 @@ controls:
     name: 3 - Return to X0 Y0 Z0
   layout: horizontal
   name: CNC tool change
-  
 - children:
   - commands:
     - G91
@@ -83,7 +79,6 @@ controls:
     name: Y -45 ( and set new home X0 Y0)
   layout: horizontal
   name: TEMPORARY MOVEMENTS TO DRILL THE HOLDING HOLES IN THE BED
-  
 feature:
   sdSupport: false
   temperatureGraph: false
@@ -258,15 +253,16 @@ plugins:
       - textOnly
       - '#000000'
     rows:
-    - _00#files_wrapper: true
-      _01#sidebar_plugin_firmware_check_warning_wrapper: false
-      _02#sidebar_plugin_firmware_check_info_wrapper: false
-      _03#sidebar_plugin_klipper_wrapper: true
-      _04#UICWebCamWidget: false
-      _05#UICGcodeVWidget: false
+    - _00#sidebar_plugin_firmware_check_warning_wrapper: false
+      _01#sidebar_plugin_firmware_check_info_wrapper: false
+      _02#sidebar_plugin_klipper_wrapper: true
+      _03#UICWebCamWidget: false
+      _04#UICGcodeVWidget: false
+      _05#files_wrapper: true
     - _00div.UICmainTabs: true
     - _00#sidebar_plugin_action_command_notification_wrapper: true
       _01#state_wrapper: true
+    themeLocal: false
     themeVersion: 0.2.1
     topIconSort:
     - navbar_plugin_action_command_prompt
@@ -276,8 +272,8 @@ plugins:
     - navbar_plugin_pi_support
     widths:
     - '3'
-    - '6'
-    - '3'
+    - '7'
+    - '2'
   virtual_printer:
     _config_version: 1
     enabled: true

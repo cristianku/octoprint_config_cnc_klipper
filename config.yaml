@@ -98,6 +98,9 @@ plugins:
         read_until: 1623992400
       _releases:
         read_until: 1620652800
+  bedlevelvisualizer:
+    _config_version: 1
+    command: BED_MESH_OUTPUT
   cura:
     cura_engine: null
   discovery:
@@ -252,13 +255,19 @@ plugins:
       - false
       - textOnly
       - '#000000'
+    - - tab_plugin_bedlevelvisualizer_link
+      - true
+      - false
+      - false
+      - textOnly
+      - '#000000'
     rows:
     - _00#sidebar_plugin_firmware_check_warning_wrapper: false
       _01#sidebar_plugin_firmware_check_info_wrapper: false
       _02#sidebar_plugin_klipper_wrapper: true
-      _03#UICWebCamWidget: false
-      _04#UICGcodeVWidget: false
-      _05#files_wrapper: true
+      _03#files_wrapper: true
+      _04#UICWebCamWidget: false
+      _05#UICGcodeVWidget: false
     - _00div.UICmainTabs: true
     - _00#sidebar_plugin_action_command_notification_wrapper: true
       _01#state_wrapper: true

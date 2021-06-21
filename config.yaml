@@ -101,6 +101,9 @@ controls:
   - commands:
     - TESTZ = +.1
     name: 3 - TESTZ Z=+.05        
+  - commands:
+    - ACCEPT
+    name: ACCEPT            
   layout: horizontal
   name: BED MESH CALIBRATION (MANUAL ) 
 feature:

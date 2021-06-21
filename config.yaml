@@ -88,7 +88,7 @@ controls:
     name: 2 - BED MESH CALIBRATE
   - commands:
     - TESTZ = -9
-    name: 3 - TESTZ Z=-9    
+    name: 3 - TESTZ Z=-9
   - commands:
     - TESTZ = -.1
     name: 3 - TESTZ Z=-.1
@@ -100,12 +100,12 @@ controls:
     name: 3 - TESTZ Z=+.1
   - commands:
     - TESTZ = +.02
-    name: 3 - TESTZ Z=+.02        
+    name: 3 - TESTZ Z=+.02
   - commands:
     - ACCEPT
-    name: ACCEPT            
+    name: ACCEPT
   layout: horizontal
-  name: BED MESH CALIBRATION (MANUAL ) 
+  name: BED MESH CALIBRATION (MANUAL )
 feature:
   sdSupport: false
   temperatureGraph: false

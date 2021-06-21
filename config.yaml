@@ -94,7 +94,7 @@ controls:
     name: 3 - TESTZ Z=-.1
   - commands:
     - TESTZ Z=+.1
-    name: 3 - TESTZ Z=+.1    
+    name: 3 - TESTZ Z=+.1
   - commands:
     - TESTZ Z=-.01
     name: 3 - TESTZ Z=-.01

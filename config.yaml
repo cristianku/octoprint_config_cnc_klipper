@@ -79,6 +79,30 @@ controls:
     name: Y -45 ( and set new home X0 Y0)
   layout: horizontal
   name: TEMPORARY MOVEMENTS TO DRILL THE HOLDING HOLES IN THE BED
+- children:
+  - commands:
+    - G28
+    name: 1 - HOME X Y Z
+  - commands:
+    - BED_MESH_CALIBRATE METHOD=manual
+    name: 2 - BED MESH CALIBRATE
+  - commands:
+    - TESTZ = -9
+    name: 3 - TESTZ = -9    
+  - commands:
+    - TESTZ = -.1
+    name: 3 - TESTZ = -.1
+  - commands:
+    - TESTZ = -.1
+    name: 3 - TESTZ = -.05
+  - commands:
+    - TESTZ = +.1
+    name: 3 - TESTZ = +.1
+  - commands:
+    - TESTZ = +.1
+    name: 3 - TESTZ = +.05        
+  layout: horizontal
+  name: BED MESH CALIBRATION (MANUAL ) 
 feature:
   sdSupport: false
   temperatureGraph: false

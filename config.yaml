@@ -106,7 +106,7 @@ controls:
     name: ACCEPT
   - commands:
     - SAVE_CONFIG
-    name: SAVE_CONFIG    
+    name: SAVE_CONFIG
   layout: horizontal
   name: BED MESH CALIBRATION (MANUAL )
 feature:

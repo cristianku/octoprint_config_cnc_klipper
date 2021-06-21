@@ -87,20 +87,20 @@ controls:
     - BED_MESH_CALIBRATE METHOD=manual
     name: 2 - BED MESH CALIBRATE
   - commands:
-    - TESTZ = -9
+    - TESTZ Z=-9
     name: 3 - TESTZ Z=-9
   - commands:
-    - TESTZ = -.1
+    - TESTZ Z=-.1
     name: 3 - TESTZ Z=-.1
   - commands:
-    - TESTZ = -.02
-    name: 3 - TESTZ Z=-.02
+    - TESTZ Z=+.1
+    name: 3 - TESTZ Z=+.1    
   - commands:
-    - TESTZ = +.1
-    name: 3 - TESTZ Z=+.1
+    - TESTZ Z=-.01
+    name: 3 - TESTZ Z=-.01
   - commands:
-    - TESTZ = +.02
-    name: 3 - TESTZ Z=+.02
+    - TESTZ Z=+.01
+    name: 3 - TESTZ Z=+.01
   - commands:
     - ACCEPT
     name: ACCEPT

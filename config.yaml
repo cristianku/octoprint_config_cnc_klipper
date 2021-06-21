@@ -93,14 +93,14 @@ controls:
     - TESTZ = -.1
     name: 3 - TESTZ Z=-.1
   - commands:
-    - TESTZ = -.1
-    name: 3 - TESTZ Z=-.05
+    - TESTZ = -.02
+    name: 3 - TESTZ Z=-.02
   - commands:
     - TESTZ = +.1
     name: 3 - TESTZ Z=+.1
   - commands:
-    - TESTZ = +.1
-    name: 3 - TESTZ Z=+.05        
+    - TESTZ = +.02
+    name: 3 - TESTZ Z=+.02        
   - commands:
     - ACCEPT
     name: ACCEPT            
